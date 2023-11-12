@@ -7,6 +7,7 @@ import {setData as setDataAction} from '../../redux/module/data'
 import './listPodgroup.css'
 
 function ListPodgroup({setColumn, setGroup, group,podgroups, setInfo, data, setData}) {
+  
     let openList = (event) =>{
         let parent = event.target.closest('.group');
         let option = parent.querySelector('.group__option');

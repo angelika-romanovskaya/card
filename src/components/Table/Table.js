@@ -56,6 +56,7 @@ function Table({typeLesson, podgroups, setInfo, data, setData}) {
         podgroups[idCard][1].countStudents = Math.floor(data[idCard].studentsNumber/2);
         setInfo(podgroups);
         setData(podgroups);
+        setGroup(1);
     }
 
     let removeColumn=(event)=>{
@@ -70,6 +71,7 @@ function Table({typeLesson, podgroups, setInfo, data, setData}) {
         podgroups[idCard][0].countStudents = data[idCard].studentsNumber;
         setInfo(podgroups);
         setData(podgroups);
+        setGroup(1);
     }
 
   return (

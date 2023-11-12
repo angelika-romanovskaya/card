@@ -1,6 +1,6 @@
 .choose__teacher:first-child > .teacher{
     flex: 0 1 80%;
-    max-width: 80%;
+    max-width: 75%;
 }
 
 @media (max-width: 578px) {

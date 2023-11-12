@@ -6,7 +6,7 @@ import {setData as setDataAction} from '../../redux/module/data'
 import './listTeacher.css'
 import {IoIosArrowDown} from 'react-icons/io';
 
-function ListTeacher({teacher, getTeacher, dis, podgroups, setInfo, setData}) {
+function ListTeacher({teacher, getTeacher, dis, podgroups, setInfo, setData, setNumberPodgroup}) {
     useEffect(()=>{
         getTeacher();
     },[])
@@ -30,10 +30,12 @@ function ListTeacher({teacher, getTeacher, dis, podgroups, setInfo, setData}) {
         podgroups[card][0][idTr] = id;
         setInfo(podgroups)
         setData(podgroups);
+        setNumberPodgroup(1)
       } else{
         podgroups[card][1][idTr] = id;
         setInfo(podgroups)
         setData(podgroups)
+        setNumberPodgroup(2)
       }
       let parent = event.target.closest('.teacher');
       let value = parent.querySelector('.teacher>.teacher__item p');

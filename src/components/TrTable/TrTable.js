@@ -8,7 +8,7 @@ import {setData as setDataAction} from '../../redux/module/data'
 
 function TrTable({lessonType,type, number, column, podgroups, setInfo, setData, group }) {
   const [dis, setDis] = useState(false);
-  const [numberPodgroup, setNumberPodgroup] = useState(group);
+  const [numberPodgroup, setNumberPodgroup] = useState(1);
 
   useEffect(()=>{
     setDis(()=>{
@@ -18,9 +18,12 @@ function TrTable({lessonType,type, number, column, podgroups, setInfo, setData, 
   }, [])
 
   let chooseTeacher = (event)=>{
+    console.log("sdfg")
     let parent = event.target.closest('.card');
     let card = parent.getAttribute('id');
+    let td = event.target.closest('td');
     if(numberPodgroup === 1){
+      setNumberPodgroup(1);
       let teacherSelect = parent.querySelectorAll('.first .teacher');
       let choose = parent.querySelector('.first .teacher > .teacher__item p').innerHTML;
       teacherSelect.forEach(element => {
@@ -33,10 +36,16 @@ function TrTable({lessonType,type, number, column, podgroups, setInfo, setData, 
       });
       setInfo(podgroups);
       setData(podgroups);
-    }else{
+    } else{
+      console.log("fgdfg")
+      setNumberPodgroup(2);
+      console.log(parent)
       let teacherSelect = parent.querySelectorAll('.second .teacher');
+      console.log(teacherSelect)
       let choose = parent.querySelector('.second .teacher > .teacher__item p').innerHTML;
+      console.log(choose)
       teacherSelect.forEach(element => {
+        console.log("sdfg")
         if(!element.classList.contains('disabled')){
           let item = element.querySelector('.teacher__item>p');
           item.innerHTML = choose;
