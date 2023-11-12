@@ -1,0 +1,79 @@
+.group{
+    position: relative;
+}
+
+.group>.group__item .arrow{
+    background: none;
+    padding: 0;
+    padding-left: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    border-left: 1px rgb(132, 129, 129) solid;
+}
+
+@media (max-width: 425px){
+    .group .table__btn{
+        font-size: 15px;
+    }
+}
+
+.group__option{
+    display: none;
+}
+
+.group__option--open{
+    display: block;
+    position: absolute;
+    top: 30px;
+    left: 0;
+    z-index: 1000;
+    border: 1px rgb(132, 129, 129) solid;
+    border-radius: 5px;
+    width: 100%;
+    max-height: 150px;
+    overflow: auto;
+}
+
+.group__item{
+    box-sizing: border-box;
+    border-radius: 5px;
+    text-align: center;
+    padding: 5px;
+    align-items: center;
+    background-color: white;
+}
+
+.group__option--open>.group__item:hover{
+    background-color: rgb(231 241 255);
+}
+
+.group > .group__item{
+    display: flex;
+    justify-content: center;
+}
+
+.disabled{
+    pointer-events:none;
+    opacity:0.6;
+}
+
+.disabled>.teacher__item{
+    background-color:rgb(242 242 242);
+    color: black;
+}
+
+.teacher>.teacher__item>p{
+    margin: 0 auto;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* @media (max-width: 576px) {
+    .teacher>.teacher__item>p{
+        max-width: 100px;
+    }
+} */
+

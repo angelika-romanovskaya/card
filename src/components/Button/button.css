@@ -1,0 +1,8 @@
+.btn__save{
+    padding: 10px;
+    color: white;
+    background: rgb(25 135 84);
+    border-radius: 5px;
+    border: none;
+    display: block;
+}

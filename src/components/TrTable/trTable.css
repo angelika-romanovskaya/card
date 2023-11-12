@@ -1,0 +1,15 @@
+.choose__teacher{
+    display: flex;
+    gap: 5px;
+    justify-content: center;
+}
+
+.btn__choose{
+    display: flex;
+    align-items: center;
+    background-color: rgb(48 58 101);
+    color: white;
+    border-radius: 5px;
+    border: none;
+    padding: 10px 13px;
+}

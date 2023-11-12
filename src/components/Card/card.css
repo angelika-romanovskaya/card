@@ -1,0 +1,48 @@
+.card{
+    margin: 20px auto;
+    padding: 10px;
+    border: 1px rgb(132, 129, 129) solid;
+    border-radius: 5px;
+}
+
+.card__icon{
+    margin-right: 5px;
+    vertical-align: middle;
+}
+
+.card__title{
+    color: rgb(7, 40, 86);
+    font-weight: bold;
+    font-size: 16px;
+    background: rgb(231 241 255);
+    border-bottom: 1px rgb(132, 129, 129) solid;
+    margin-bottom: 5px;
+    padding: 15px;
+}
+
+.card__table{
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    gap: 10px;
+    padding-bottom: 15px;
+    border-bottom: 1px rgb(132, 129, 129) solid;
+    margin-bottom: 15px;
+}
+
+.card__info{
+    display: grid;
+    grid-template-columns: 1fr 0.5fr 1fr 0.5fr;
+    gap: 60px;
+    text-align: left;
+    font-size: 14px;
+}
+
+@media (max-width: 456px) {
+    .card__info{
+        gap: 30px;
+    }
+}
+
+.info__type{
+    font-weight: bold;
+}
